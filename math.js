@@ -61,3 +61,11 @@ function calculoCirculo(radio) {
 }
 
 console.groupEnd('Circle')
+
+function calculaAreaTriangulo(a,b) {
+    const h = Math.sqrt(Math.pow(a,2)*(Math.pow(b,2)/4));
+
+    return {
+        area: (b*h)/2,
+    }
+}
