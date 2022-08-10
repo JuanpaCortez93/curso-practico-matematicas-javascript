@@ -13,6 +13,16 @@ const alturaTriangulo = 5.5;
 const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + ladoTrianguloBase;
 const areaTriangulo = (alturaTriangulo*ladoTrianguloBase) / 2;
 
+console.log({
+    ladoTriangulo1,
+    ladoTriangulo2,
+    ladoTrianguloBase,
+    alturaTriangulo,
+    perimetroTriangulo,
+    areaTriangulo,
+});
+
+
 function calcularTriangulo(lado1, lado2, base, altura) {
     return{
         perimetro: (lado1+lado2+base),
@@ -27,12 +37,27 @@ function calcularCuadrado(lado) {
     }
 }
 
-console.log({
-    ladoTriangulo1,
-    ladoTriangulo2,
-    ladoTrianguloBase,
-    alturaTriangulo,
-    perimetroTriangulo,
-    areaTriangulo,
-});
+console.group('Circle')
 
+const radioCirculo = 3;
+const diametroCirculo = radioCirculo*2;
+const PI = 3.141516;
+
+const circurferencia = diametroCirculo*PI;
+const areaCirculo = PI*(radioCirculo**2);
+
+console.log({
+    circurferencia,
+    areaCirculo,
+})
+
+function calculoCirculo(radio) {
+    const diametro = radio * 2;
+
+    return {
+        circurferencia: diametro * PI,
+        area: Math.PI*Math.pow(radio,2),
+    }
+}
+
+console.groupEnd('Circle')
